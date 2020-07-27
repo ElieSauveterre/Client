@@ -115,7 +115,6 @@ class Issues extends AbstractApi
      */
     public function showNotes($project_id, $issue_iid, $page = 1)
     {
-        return $this->get($this->getProjectPath($project_id, 'issues/'.$this->encodePath($issue_iid).'/notes'));
         return $this->get($this->getProjectPath($project_id, 'issues/'.$this->encodePath($issue_iid).'/notes?page='.$page));
     }
 
